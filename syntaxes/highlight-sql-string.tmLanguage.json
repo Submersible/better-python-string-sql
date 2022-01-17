@@ -6,7 +6,7 @@
     "patterns": [
         {
             "name": "meta.embedded.block.sql",
-            "begin": "\\s*((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace))",
+            "begin": "\\s*((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace|with))",
             "end": ";|(?=\"\"\"|\"|--|((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace)))",
             "beginCaptures": {
                 "1": {
