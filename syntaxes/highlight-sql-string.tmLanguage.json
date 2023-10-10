@@ -6,8 +6,8 @@
     "patterns": [
         {
             "name": "meta.embedded.block.sql",
-            "begin": "\\s*((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace))\\s+",
-            "end": ";|(?=\"\"\"|\"|--|((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace)))",
+            "begin": "\\s*((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace|with))\\s+",
+            "end": ";|(?=\"\"\"|\"|--|((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace|with))\\s+)",
             "beginCaptures": {
                 "1": {
                     "name": "keyword.other.DML.sql"
