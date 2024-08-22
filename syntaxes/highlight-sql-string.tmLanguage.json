@@ -7,7 +7,7 @@
         {
             "name": "meta.embedded.block.sql",
             "begin": "\\s*((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace))",
-            "end": ";|(?=\"\"\"|\"|--|((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace)))",
+            "end": ";|(?=\"\"\"|\"|'|'''|--|((?i)(explain|alter|analyze|attach|begin|commit|create|delete|detach|drop|insert|pragma|reindex|release|rollback|savepoint|select|update|vacuum|replace)))",
             "beginCaptures": {
                 "1": {
                     "name": "keyword.other.DML.sql"
@@ -24,8 +24,8 @@
         },
         {
             "name": "meta.embedded.block.sql",
-            "begin": "\\s*(--[^\"\\n\\r\\{\\}\\\\]*)",
-            "end": "(?=\"|\\n|\\r)",
+            "begin": "\\s*(--[^\"'\\n\\r\\{\\}\\\\]*)",
+            "end": "(?=\"|'|\\n|\\r)",
             "beginCaptures": {
                 "0": {
                     "name": "comment.line.double-dash.sql"
@@ -36,7 +36,7 @@
                     "include": "source.python#fstring-guts"
                 },
                 {
-                    "match": "[^\"\\n\\r\\{\\}\\\\]*",
+                    "match": "[^\"'\\n\\r\\{\\}\\\\]*",
                     "name": "comment.line.double-dash.sql"
                 }
             ]
